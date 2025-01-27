@@ -3,6 +3,7 @@ import random
 
 pygame.init()
 
+# Dimension de l'ecran et couleur
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 400
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -12,6 +13,7 @@ BLACK = (0, 0, 0)
 
 game_speed = 10
 
+# Classe Dino
 class Dino(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
@@ -35,7 +37,7 @@ class Dino(pygame.sprite.Sprite):
             if self.jump_speed < -15:
                 self.is_jumping = False
                 self.jump_speed = 15
-
+# Classe Obstacle
 class Obstacle(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
@@ -51,12 +53,14 @@ class Obstacle(pygame.sprite.Sprite):
             self.rect.x = SCREEN_WIDTH
             self.rect.y = SCREEN_HEIGHT - 90
 
+# Creation des sprites
 all_sprites = pygame.sprite.Group()
 obstacles = pygame.sprite.Group()
 
 dino = Dino()
 all_sprites.add(dino)
 
+# Creation des obstacles
 for _ in range(3):
     obstacle = Obstacle()
     all_sprites.add(obstacle)
@@ -65,6 +69,7 @@ for _ in range(3):
 running = True
 clock = pygame.time.Clock()
 
+# Boucle de jeu
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
