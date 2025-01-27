@@ -1,6 +1,6 @@
 import pygame
 import sys
-from genese import genese
+from gentil import genese
 
 # Initialize Pygame
 pygame.init()

@@ -1,7 +1,7 @@
 import sys
 import pygame
 
-class genese:
+class GENTIL:
     def __init__(self, nom, color, widht, height):
         self.nom = nom
         self.color = color
