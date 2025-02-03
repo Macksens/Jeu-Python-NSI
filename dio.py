@@ -11,7 +11,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
-game_speed = 10
+game_speed = 11
 
 # Classe Dino
 class Dino(pygame.sprite.Sprite):
@@ -37,6 +37,7 @@ class Dino(pygame.sprite.Sprite):
             if self.jump_speed < -15:
                 self.is_jumping = False
                 self.jump_speed = 15
+
 # Classe Obstacle
 class Obstacle(pygame.sprite.Sprite):
     def __init__(self):
