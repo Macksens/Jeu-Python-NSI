@@ -1,5 +1,6 @@
 import pygame
 import random
+import numpy as np
 
 pygame.init()
 
@@ -11,7 +12,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
-game_speed = 11
+game_speed = 10
 
 # Classe Dino
 class Dino(pygame.sprite.Sprite):
